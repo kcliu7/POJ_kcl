@@ -12,11 +12,11 @@ float getHumidex(float temperature, float dewpoint)
 
 float getTemperature(float dewpoint, float humidex)
 {
-    float temperature, h, e;
-    e = 6.11 * exp(5417.7530 * ((1 / 273.16) - (1 / (dewpoint + 273.16))));
-    h = 0.5555 * (e - 10.0);
-    temperature = humidex - h;
-    return temperature;
+	float temperature, h, e;
+	e = 6.11 * exp(5417.7530 * ((1 / 273.16) - (1 / (dewpoint + 273.16))));
+	h = 0.5555 * (e - 10.0);
+	temperature = humidex - h;
+	return temperature;
 }
 
 float getDewpoint(float temperature, float humidex)
